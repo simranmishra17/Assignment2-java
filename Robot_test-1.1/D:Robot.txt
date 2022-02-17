@@ -1,8 +1,4 @@
-F,F
-F,B
-L,L
-R,R
-F,F
-F,B
-L,L
-R,R
+F
+F
+F
+R
