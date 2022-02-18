@@ -1,10 +1,59 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
+import java.util.List;
+class OmniDirectional extends OmniMovement {
+    public void actual_implementation(List<String> listOfMovement) {
+        Robot omniDirectionalDrive = new Robot();
+        System.out.println(omniDirectionalDrive.toString());
 
-import static java.lang.Math.E;
+        for (String i : listOfMovement) {
+            if (i.charAt(0) == 'F' && i.charAt(2)=='F') {
+                omniDirectionalDrive = MoveForward(omniDirectionalDrive);
+                if (omniDirectionalDrive.CheckXYCoordinates()) {
+                    break;
+                }
+            } else if (i.charAt(0) == 'F' && i.charAt(2)=='B') {
+                omniDirectionalDrive = moveForwardBackward(omniDirectionalDrive);
+                if (omniDirectionalDrive.CheckXYCoordinates()) {
+                    break;
+                }
+            } else if (i.charAt(0) == 'B' && i.charAt(2)=='F') {
+                omniDirectionalDrive= moveBackwardForward(omniDirectionalDrive);
+                if (omniDirectionalDrive.CheckXYCoordinates()) {
+                    break;
+                }
+            } else if (i.charAt(0) == 'B' && i.charAt(2)=='B') {
+                omniDirectionalDrive= MoveBackward(omniDirectionalDrive);
+                if (omniDirectionalDrive.CheckXYCoordinates()) {
+                    break;
+                }
+            } else if(i.charAt(0)=='F' && i.length()==1){
+                omniDirectionalDrive=moveleftForward(omniDirectionalDrive);
+                if (omniDirectionalDrive.CheckXYCoordinates()) {
+                    break;
+                }
+            }else if(i.charAt(2)=='F'){
+                omniDirectionalDrive=moverightForward(omniDirectionalDrive);
+                if (omniDirectionalDrive.CheckXYCoordinates()) {
+                    break;
+                }
+            }else if(i.charAt(0)=='L' && i.charAt(0)=='L'){
+                omniDirectionalDrive=MoveLeft(omniDirectionalDrive);
+                if (omniDirectionalDrive.CheckXYCoordinates()) {
+                    break;
+                }
+            }else if(i.charAt(0)=='R'&& i.charAt(2)=='R'){
+                omniDirectionalDrive=MoveRight(omniDirectionalDrive);
+                if (omniDirectionalDrive.CheckXYCoordinates()) {
+                    break;
+                }
+            }else{
+                omniDirectionalDrive.WrongMove();
+            }
+        }
+    }
+}
 
-class OmniDirectionalDrive extends Robotimplements {
+/*
+class OmniDirectional extends RobotConstraintImplement {
     public void actual_implementation() {
         try {
             // Create f1 object of the file to read data
@@ -86,3 +135,4 @@ class OmniDirectionalDrive extends Robotimplements {
         }
     }
 }
+*/
