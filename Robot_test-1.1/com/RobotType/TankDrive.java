@@ -1,3 +1,6 @@
+package RobotType;
+
+import java.util.List;
 class TankDriveMovement implements Movement {
 
     @Override
@@ -50,5 +53,37 @@ class TankDriveMovement implements Movement {
         r.setDirection(direction);
         System.out.println(r.toString());
         return r;
+    }
+}
+class TankDrive extends TankDriveMovement {
+    public void actual_implementation(List<String> listOfMovement) {
+        Robot tankDrive = new Robot();
+        System.out.println(tankDrive.toString());
+
+        for (String i : listOfMovement) {
+            if (i.charAt(0) == 'F' && i.charAt(2)=='F') {
+                tankDrive =MoveForward(tankDrive);
+                if (tankDrive.CheckXYCoordinates()) {
+                    break;
+                }
+            } else if (i.charAt(0) == 'F' && i.charAt(2)=='B') {
+                tankDrive = MoveRight(tankDrive);
+                if (tankDrive.CheckXYCoordinates()) {
+                    break;
+                }
+            } else if (i.charAt(0) == 'B' && i.charAt(2)=='F') {
+                tankDrive= MoveLeft(tankDrive);
+                if (tankDrive.CheckXYCoordinates()) {
+                    break;
+                }
+            } else if (i.charAt(0) == 'B' && i.charAt(2)=='B') {
+                tankDrive= MoveBackward(tankDrive);
+                if (tankDrive.CheckXYCoordinates()) {
+                    break;
+                }
+            }else{
+                tankDrive.WrongMove();
+            }
+        }
     }
 }
