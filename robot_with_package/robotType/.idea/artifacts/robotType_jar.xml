@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="robotType:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/robotType_jar</output-path>
+    <root id="archive" name="robotType.jar">
+      <element id="module-output" name="robotType" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../Movement/out/artifacts/Movement_jar/Movement.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../Direction/out/artifacts/Direction_jar/Direction.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../robot/out/artifacts/robot_jar/robot.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

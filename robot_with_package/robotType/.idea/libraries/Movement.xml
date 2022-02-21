@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Movement">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Movement/out/artifacts/Movement_jar/Movement.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ReadFromFile:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ReadFromFile_jar</output-path>
+    <root id="archive" name="ReadFromFile.jar">
+      <element id="module-output" name="ReadFromFile" />
+    </root>
+  </artifact>
+</component>

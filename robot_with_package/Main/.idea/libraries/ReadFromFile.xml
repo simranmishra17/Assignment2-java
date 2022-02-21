@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ReadFromFile">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../ReadFromFile/out/artifacts/ReadFromFile_jar/ReadFromFile.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
